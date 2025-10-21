@@ -18,7 +18,7 @@ export class RegisterDto {
 
   @IsIn(['host', 'guest'])
   @IsOptional()
-  role: UserRole = 'host';
+  role: UserRole = 'guest';
 }
 
 export class LoginDto {
