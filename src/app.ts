@@ -13,6 +13,9 @@ export function createApp(dataSource?: DataSource) {
     useDataSource(dataSource);
   }
 
+  // Trust proxy headers for rate limiting and client IP detection
+  app.set('trust proxy', 1);
+
   app.use(cors());
   app.use(express.json());
 
